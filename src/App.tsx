@@ -1,25 +1,17 @@
 import React from 'react';
 
+import { Card, Button } from './components';
+
 const App: React.FC = () => {
   return (
-    <section className="card">
-      <header className="card-header">
-        <h1 className="card-title">Weather App</h1>
-      </header>
-      <div className="card-content">
-
-        <div className="weather">
-
-          <img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-256.png" alt="" title="" className="weather-image" />
-
-          <p className="weather-temperature">23 C</p>
-          <p className="weather-location">Barueri, BR</p>
-
-          <button className="button is-large">My location</button>
-        </div>
+    <Card title="APP">
+      <div className="weather">
+        <img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-256.png" alt="" title="" className="weather-image" />
+        <p className="weather-temperature">23 C</p>
+        <p className="weather-location">Barueri, BR</p>
+        <Button text="My location" onClick={() => console.log('click')} />
       </div>
-      <footer className="card-footer"></footer>
-    </section>
+    </Card>
   )
 };
 
