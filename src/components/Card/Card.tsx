@@ -1,21 +1,20 @@
 import React from 'react';
 
-import { Wrapper, Header, Title, Content } from './Card.styles';
-
-type CardProps = {
-    title: string,
-    children: React.ReactNode,
+interface Props {
+    title: String;
 }
 
-const Card = ({ children, title }: CardProps) => (
-    <Wrapper>
-        <Header>
-            <Title className="card-title">{title}</Title>
-        </Header>
-        <Content className="card-content">
+const Card: React.FC<Props> = ({ title, children }) => (
+    <section className="card">
+        <header className="card-header">
+            <h1 className="card-title">{title}</h1>
+        </header>
+        <div className="card-content">
             {children}
-        </Content>
-    </Wrapper>
+        </div>
+        <footer className="card-footer"></footer>
+    </section>
 );
 
 export default Card;
+
