@@ -85,11 +85,40 @@ code {
 }
 
 .weather {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .weather .weather-image {
-  width: 150px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50px;
+  background-size: contain;
+  background-color: #f1f1f1;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.weather .weather-image.Clouds {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-22-256.png');
+}
+.weather .weather-image.Rain {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-32-256.png');
+}
+.weather .weather-image.Snow {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-24-256.png');
+}
+.weather .weather-image.Clear {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-256.png');
+}
+.weather .weather-image.Thunderstom {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-23-256.png');
+}
+.weather .weather-image.Drizzle {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-30-256.png');
 }
 
 .weather .weather-temperature {
