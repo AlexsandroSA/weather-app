@@ -6,6 +6,13 @@ __Weather App__ is a fast, simple and intuitive app, with a clean User Interface
 
 Getting weather information has never been so easy and amazing. Stay connected to the latest weather conditions with Simple Weathe
 
+## How to start
+
+ 1. Create account in [openweathermap](https://openweathermap.org/appid)
+ 2. Update `.env.exemple`
+ 3. Install dependences `yarn install`
+ 4. Start app `yarn start`
+
 ## Available Scripts
 
 In the project directory, you can run:
