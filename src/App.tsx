@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { appName } from "./helpers/envManager";
+import { appName, appVersion } from "./helpers/envManager";
 import { getWeatherByCoords } from "./api/services/weather.service";
 import { Card } from "./components";
 
@@ -79,6 +79,8 @@ const App: React.FC = () => {
             View your weather
           </button>
         )}
+        
+        <p>Version {appVersion}</p>
       </div>
     </Card>
   );
