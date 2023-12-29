@@ -14,6 +14,5 @@ export async function getWeatherByCoords(lat: number, lon: number) {
         })
         .catch(e => console.log(e));
 
-    console.log(data);
     return data;
 }

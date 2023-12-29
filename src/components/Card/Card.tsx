@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface Props {
     title: String;
+    children: ReactNode;
 }
 
 const Card: React.FC<Props> = ({ title, children }) => (
