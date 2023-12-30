@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e620c35f-9261-44f4-ad69-f685de443b93/deploy-status)](https://app.netlify.com/sites/hopeful-morse-972f17/deploys)
+
 ## Weather App
 ![Weather App - site](/cover.png)
 [Link to app!](https://hopeful-morse-972f17.netlify.com/)
