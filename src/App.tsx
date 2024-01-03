@@ -4,8 +4,8 @@ import { getWeatherByCoords } from "./api/services/weather.service";
 import { Card } from "./components";
 
 interface ErrorMessage {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
 }
 
 interface Weather {
@@ -38,6 +38,7 @@ const App: React.FC = () => {
   }, [geo]);
 
   async function onClickLoadWeather() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response: any = await getWeatherByCoords(lat, lon);
 
     const data = {
