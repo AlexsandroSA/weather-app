@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 interface Props {
-    title: String;
+    title: string;
     children: ReactNode;
 }
 
