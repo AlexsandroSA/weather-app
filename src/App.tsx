@@ -80,7 +80,7 @@ const App: React.FC = () => {
             View your weather
           </button>
         )}
-        
+
         <p>Version {appVersion}</p>
       </div>
     </Card>
