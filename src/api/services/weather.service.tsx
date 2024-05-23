@@ -7,7 +7,7 @@ export async function getWeatherByCoords(lat: number, lon: number) {
         .then(data => {
             return {
                 temp: Math.round(data.main.temp -273.15),
-                type: data.weather[0].main,
+                type: data.weather[0].main.toLocaleLowerCase(),
                 name: data.name,
                 country: data.sys.country,
             };

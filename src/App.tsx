@@ -1,7 +1,16 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { appName, appVersion } from "./helpers/envManager";
-import { getWeatherByCoords } from "./api/services/weather.service";
-import { Card } from "./components";
+import { appName, appVersion } from "@/helpers/envManager";
+import { getWeatherByCoords } from "@/api/services/weather.service";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ICON_ENUM } from "@/enums/icons.enum";
+import { TIcon } from "@/types/icon.type";
 
 interface ErrorMessage {
   status: string;
@@ -10,7 +19,7 @@ interface ErrorMessage {
 
 interface Weather {
   temp: number;
-  type: string;
+  type: TIcon;
   name: string;
   country: string;
 }
@@ -37,7 +46,7 @@ const App: React.FC = () => {
     });
   }, [geo]);
 
-  async function onClickLoadWeather() {
+  async function handleClickLoadWeather() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response: any = await getWeatherByCoords(lat, lon);
 
@@ -61,29 +70,49 @@ const App: React.FC = () => {
   }, [geo, savePosition]);
 
   return (
-    <Card title={appName}>
-      <div className="weather">
-        {error && error.message && <p>{error.message}</p>}
+    <div>
+      <Card className="w-80">
+        <CardHeader>
+          <CardTitle>{appName}</CardTitle>
+        </CardHeader>
 
-        {weather && (
-          <>
-            <div className={`weather-image ${weather.type}`} />
-            <p className="weather-temperature">{weather.temp}°C</p>
-            <p className="weather-location">
-              {weather.name}, {weather.country}
-            </p>
-          </>
-        )}
+        <CardContent>
+          {error && error.message && <p>{error.message}</p>}
 
-        {!weather && (
-          <button className="button is-large" onClick={onClickLoadWeather}>
-            View your weather
-          </button>
-        )}
+          {weather && (
+            <div className="flex flex-row justify-between items-center">
+              <div>
+                <h3 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                  {weather.temp}°C
+                </h3>
+                <p className="weather-location">
+                  {weather.name}, {weather.country}
+                </p>
+              </div>
 
-        <p>Version {appVersion}</p>
-      </div>
-    </Card>
+              <figure>
+                <img
+                  className="w-24"
+                  src={ICON_ENUM[weather.type]}
+                  alt={weather.type}
+                />
+                <figcaption></figcaption>
+              </figure>
+            </div>
+          )}
+
+          {!weather && (
+            <Button className="w-full" onClick={handleClickLoadWeather}>
+              View your weather
+            </Button>
+          )}
+        </CardContent>
+
+        <CardFooter>
+          <p className="text-sm text-muted-foreground">Version {appVersion}</p>
+        </CardFooter>
+      </Card>
+    </div>
   );
 };
 
