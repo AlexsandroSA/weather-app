@@ -3,10 +3,23 @@
 import path from "path";
 import { defineConfig } from "vite";
 import { splitVendorChunkPlugin } from "vite";
+import { VitePWA } from "vite-plugin-pwa";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [splitVendorChunkPlugin(), react()],
+  plugins: [
+    splitVendorChunkPlugin(),
+    react(),
+    VitePWA({
+      registerType: "autoUpdate",   
+      devOptions: {
+        enabled: false,
+        navigateFallback: 'index.html',
+        suppressWarnings: true,
+        type: 'module',
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

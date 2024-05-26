@@ -5,7 +5,9 @@
 ![Weather App - site](/cover.png)
 [Link to app!](https://hopeful-morse-972f17.netlify.com/)
 
-__Weather App__ is a fast, simple and intuitive app, with a clean user interface without those clutters and ads. Get all the information you want at a glance.
+__Weather App__ is a fast, simple and intuitive app, with a clean user interface without those clutters and ads. 
+
+Getting weather information has never been so easy and amazing.
 
 ## How to start
 
