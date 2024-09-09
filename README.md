@@ -3,7 +3,7 @@
 ## Weather App
 
 ![Weather App - site](/cover.png)
-[Link to app!](https://hopeful-morse-972f17.netlify.com/)
+[Link to app!](https://hopeful-morse-972f17.netlify.app/)
 
 __Weather App__ is a fast, simple and intuitive app, with a clean user interface without those clutters and ads. 
 
