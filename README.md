@@ -1,56 +1,101 @@
+# Weather App
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e620c35f-9261-44f4-ad69-f685de443b93/deploy-status)](https://app.netlify.com/sites/hopeful-morse-972f17/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node Version](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)](https://www.typescriptlang.org/)
 
-## Weather App
+A fast, simple and intuitive weather app with a clean interface — no clutter, no ads.
 
-![Weather App - site](/cover.png)
-[Link to app!](https://hopeful-morse-972f17.netlify.app/)
+![Weather App Preview](/cover.png)
 
-__Weather App__ is a fast, simple and intuitive app, with a clean user interface without those clutters and ads. 
+**[View Live Demo →](https://hopeful-morse-972f17.netlify.app/)**
 
-Getting weather information has never been so easy and amazing.
+## ✨ Features
 
-## How to start
+- 🌍 **Geolocation-based** — Automatically detects your location
+- 🎨 **Dynamic backgrounds** — Visual effects that match the weather
+- 📱 **PWA support** — Install on any device, works offline
+- ⚡ **Lightning fast** — Built with Vite for optimal performance
+- 🧪 **Fully tested** — Unit tests with Vitest, E2E with Playwright
 
- 1. Create account in [openweathermap](https://openweathermap.org/appid)
- 2. Copy `.env.example` to `.env`
- 3. Install dependences `npm install`
- 4. Start app `npm start`
+## 🚀 Getting Started
 
-## Available Scripts
+### Prerequisites
 
-In the project directory, you can run:
+- Node.js 20 or higher
+- npm or yarn
+- [OpenWeatherMap API key](https://openweathermap.org/appid) (free)
 
-### `npm start`
+### Installation
 
-Runs the app in the development mode.
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+1. **Clone the repository**
 
-The page will reload if you make edits.
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
+   ```
 
-You will also see any lint errors in the console.
+2. **Set up environment variables**
 
-### `npm test` or `npm run test:watch`
+   ```bash
+   cp .env.example .env
+   ```
 
-Launches the test runner in the interactive watch mode.
+   Then edit `.env` and add your OpenWeatherMap API key:
 
-### `npm run test:coverage`
+   ```env
+   VITE_API_URL=https://api.openweathermap.org/data/2.5
+   VITE_API_KEY=your_api_key_here
+   ```
 
-Launches the coverage test runner.
+3. **Install dependencies**
 
-### `npm run e2e`
+   ```bash
+   npm install
+   ```
 
-Launches the end-to-end test runner.
+4. **Start the development server**
 
-### `npm run lint`
+   ```bash
+   npm start
+   ```
 
-Launches the lint runner.
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### `npm run build`
+## 📜 Scripts
 
-Builds the app for production to the `build` folder.
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm test` | Run unit tests |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:ui` | Run tests with Vitest UI |
+| `npm run test:coverage` | Generate coverage report |
+| `npm run e2e` | Run E2E tests |
+| `npm run e2e:ui` | Run E2E tests with UI |
+| `npm run lint` | Run ESLint |
+| `npm run type-check` | Run TypeScript type checking |
 
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌤️ Weather Types
 
-The build is minified and the filenames include the hashes.
+The app supports dynamic backgrounds for these weather conditions:
 
-Your app is ready to be deployed!
+| Type | Description |
+|------|-------------|
+| ☀️ Clear | Warm sunset gradient |
+| ☁️ Clouds | Silver-gray atmosphere |
+| 🌧️ Drizzle | Soft blue tones |
+| 🌧️ Rain | Deep blue with rain animation |
+| ❄️ Snow | Light blue with snowfall effect |
+| ⛈️ Thunderstorm | Dark purple with lightning |
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [Alexsandro Silva Alves](https://github.com/alexsandrosa)
